@@ -1,0 +1,26 @@
+#!/usr/bin/bash
+
+clock() {
+	DATE=$(LC_ALL=ja_JP.UTF-8 date | cut -c10-23)
+	TIME=$(date "+%H:%M")
+	echo -n "${DATE} - ${TIME}"
+}
+
+
+while true; do
+	echo "%{c}$(clock)"
+	sleep 60
+done |\
+
+    
+/bin/lemonbar -bd \
+		-g 240x56+1160+32 \
+		-f "Roboto:size=9" \
+		-f "Source Han Sans JP:size=9" \
+		-f "Font Awesome 5 Free:size=10:style=Solid" \
+		-o -4 \
+		-o -3 \
+		-o -5 \
+		-n "bar" \
+		-B\#e9e9e9 \
+		-F\#000000

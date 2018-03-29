@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+#
+# mpv
+
+fetch() {
+        url="$(xsel -p)"
+        echo -n "$url"
+}
+
+mpv --really-quiet --loop $(fetch)

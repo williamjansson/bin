@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+#
+# figma
+
+chromium --new-window --app=https://www.figma.com/
