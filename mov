@@ -7,4 +7,4 @@ fetch() {
         echo -n "$url"
 }
 
-mpv --really-quiet --loop $(fetch)
+tabbed -g 1824x1026 -d mpv --really-quiet --loop $(fetch) --wid
