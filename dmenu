@@ -3,7 +3,7 @@
 
 list=(
   "ウェブ" "chromium"
-  "ファイル" "st -e ranger"
+  "ファイル" "st -g 86x24 -T small -n small -e ranger"
   "カラー" "gpick"
   "デザイン" "figma"
   "画像編集" "gimp"
