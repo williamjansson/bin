@@ -1,10 +1,10 @@
 #!/usr/bin/bash
 #
-# mpv
+# omxplayer
 
-fetch() {
-        url="$(xsel -p)"
-        echo -n "$url"
+url() {
+        fetch="$(xsel -p)"
+        echo -n "$fetch"
 }
 
-tabbed -g 1824x1026 -d mpv --really-quiet --loop $(fetch) --wid
+omxplayer --fps 60 --vol -3000 --loop --win "448 212 1472 868" $(url)

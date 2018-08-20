@@ -14,13 +14,11 @@ done |\
 
     
 /bin/lemonbar -bd \
-		-g 240x56+1160+32 \
-		-f "Roboto:size=9" \
-		-f "Source Han Sans JP:size=9" \
-		-f "Font Awesome 5 Free:size=10:style=Solid" \
-		-o -4 \
-		-o -3 \
-		-o -5 \
+		-g 132x32+894+24 \
+		-f "Roboto:size=11" \
+		-f "Noto Sans CJK JP:size=11" \
+		-o -2 \
+		-o -1 \
 		-n "bar" \
-		-B\#e9e9e9 \
-		-F\#000000
+		-B\#e8e8e8 \
+		-F\#1e2d1c

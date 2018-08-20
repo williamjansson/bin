@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+#
+# omxplayer (youtube-dl)
+
+url() {
+	fetch="$(xsel -p)"
+	echo -n "youtube-dl -f best -g $fetch"
+}
+
+omxplayer --fps 60 --loop --win "448 212 1472 868" `$(url)`
