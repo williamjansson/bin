@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+ssh -f -N -R 6969:localhost:22 x@68.183.234.172

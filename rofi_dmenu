@@ -2,10 +2,10 @@
 # rofi_system_dmenu.sh / JennyM 2017 malkalech.com
 
 list=(
-  "インターネット" "emacs -g 114x33 -T エディター --funcall eshell"
+  "インターネット" "firefox"
   "ファイル" "emacsclient -cn -F '((width . 37) (height . 30))' -e '(ranger)' x"
   "プレビュー" "thunar ~/壁紙/"
-  "カラー" "gpick"
+  "カラー" "st -e grabc"
   "デザイン" "inkscape"
   "画像編集" "gimp"
   "再起動" "sudo reboot"
