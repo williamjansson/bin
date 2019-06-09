@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+hsetroot -center ~/img/leaf.jpeg
