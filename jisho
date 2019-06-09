@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+st -g 64x33 -e w3m http://nihongo.monash.edu/cgi-bin/wwwjdic?1C

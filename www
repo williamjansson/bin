@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+#
+# w3m
+
+st -g 64x33 -e w3m -no-graph duckduckgo.com
