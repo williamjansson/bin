@@ -1,0 +1,3 @@
+#!/bin/mksh
+
+st -g 49x24 & disown
