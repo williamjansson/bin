@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+st -g 64x33 -e w3m https://news.yahoo.co.jp/

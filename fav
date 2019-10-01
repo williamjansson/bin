@@ -1,0 +1,16 @@
+#!/bin/dash
+
+DMENU="dmenu -w 400 -x 760 -y 420 -nb #faebd7 -nf #1e2d1c -sb #1e2d1c -sf #faebd7"
+
+choice=$(echo "www\nvim\nfile\nprev\ncolor\nsleep\nreboot\npoweroff" | $DMENU)
+
+case "$choice" in
+	www) www ;;
+	vim) st -g 96x33 -e vim ~/hej ;;
+	noice) st -g 16x16 -e noice ~/ ;;
+	sxiv) sxiv -t ~/img ;;
+	figma) firefox ;;
+	sleep) echo sleep ;;
+	rboot) sudo reboot ;;
+	off) sudo poweroff ;;
+esac
