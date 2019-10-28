@@ -1,15 +1,15 @@
 #!/bin/sh
 #
-# ufetch-void - tiny system info for void
+# ufetch-netbsd - tiny system info for netbsd
 
 ## INFO
 
 # user is already defined
 host="$(hostname)"
-os='Void Linux'
-kernel="$(uname -sr)"
-uptime="$(uptime -p | sed 's/up //')"
-packages="$(xbps-query -l | wc -l)"
+os="$(uname -sr)"
+kernel="$(uname -r)"
+uptime="$(uptime | awk -F, '{sub(".*up ",x,$1);print $1}' | sed -e 's/^[ \t]*//')"
+packages="$(pkg_info | wc -l | sed -e 's/^[ \t]*//')"
 shell="$(basename "$SHELL")"
 
 ## UI DETECTION
@@ -54,22 +54,22 @@ if [ -x "$(command -v tput)" ]; then
 fi
 
 # you can change these
-lc="${reset}${bold}${green}"        # labels
-nc="${reset}${bold}${green}"        # user and hostname
+lc="${reset}${bold}${yellow}"       # labels
+nc="${reset}${bold}${yellow}"       # user and hostname
 ic="${reset}${bold}${white}"        # info
-c0="${reset}${bold}${green}"        # first color
-c1="${reset}${green}"               # second color
+c0="${reset}${white}"               # first color
+c1="${reset}${yellow}"              # second color
 
 ## OUTPUT
 
 cat <<EOF
 
-${c0}      _______      ${nc}${USER}${ic}@${nc}${host}${reset}
-${c1}      ${c0}\_____ \`-    ${lc}OS:        ${ic}${os}${reset}
-${c1}   /\   ${c0}___ \`- \   ${lc}KERNEL:    ${ic}${kernel}${reset}
-${c1}  | |  ${c0}/   \  | |  ${lc}UPTIME:    ${ic}${uptime}${reset}
-${c1}  | |  ${c0}\___/  | |  ${lc}PACKAGES:  ${ic}${packages}${reset}
-${c1}   \ \`-_____  ${c0}\/   ${lc}SHELL:     ${ic}${shell}${reset}
-${c1}    \`-______\      ${lc}${uitype}:        ${ic}${ui}${reset}
+${c0}  \\\\${c1}\`-______,----__    ${nc}${USER}${ic}@${nc}${host}${reset}
+${c0}   \\\        ${c1}__,---\`_  ${lc}OS:        ${ic}${os}${reset}
+${c0}    \\\       ${c1}\`.____    ${lc}KERNEL:    ${ic}${kernel}${reset}
+${c0}     \\\\${c1}-______,----\`-  ${lc}UPTIME:    ${ic}${uptime}${reset}
+${c0}      \\\               ${lc}PACKAGES:  ${ic}${packages}${reset}
+${c0}       \\\              ${lc}SHELL:     ${ic}${shell}${reset}
+${c0}        \\\             ${lc}${uitype}:        ${ic}${ui}${reset}
 
 EOF

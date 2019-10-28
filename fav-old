@@ -2,15 +2,15 @@
 
 DMENU="dmenu -w 400 -x 760 -y 420 -nb #faebd7 -nf #1e2d1c -sb #1e2d1c -sf #faebd7"
 
-choice=$(echo -e "www\nvim\nfile\nimg\nclr\nlock\nreboot\nshutdown" | $DMENU)
+choice=$(echo -e "www\nvim\nfile\nprev\ncolor\nsleep\nreboot\npoweroff" | $DMENU)
 
 case "$choice" in
 	www) www ;;
 	vim) st -g 96x33 -e vim ~/hej ;;
 	file) st -g 16x16 -e noice ~/ ;;
-	img) sxiv -t ~/img ;;
-	clr) firefox ;;
-	lock) echo sleep ;;
-	reboot) sudo reboot ;;
-	shutdown) sudo poweroff ;;
+	prev) sxiv -t ~/img ;;
+	figma) firefox ;;
+	sleep) echo sleep ;;
+	rboot) sudo reboot ;;
+	off) sudo poweroff ;;
 esac
