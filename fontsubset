@@ -1,0 +1,1 @@
+pyftsubset Inter-Regular.woff2 --unicodes=U+2C,U+2E,U+30-39,U+41-5A,U+61-7A --flavor=woff2 --no-hinting --desubroutinize --name-IDs='' --drop-tables+=GSUB --with-zopfli

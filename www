@@ -1,5 +1,7 @@
-#!/bin/sh
+#!/usr/bin/bash
 #
 # w3m
 
-st -g 64x33 -e w3m -no-graph duckduckgo.com
+hsetroot -solid "#faf6e6" && st -g 64x33 -e w3m -no-graph duckduckgo.com
+
+trap wallpaper EXIT

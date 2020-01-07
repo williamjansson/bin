@@ -1,0 +1,7 @@
+#!/bin/dash
+
+#hsetroot -solid "#faebd7" && st -g 80x33
+
+#trap wallpaper EXIT
+
+st -g 80x33

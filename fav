@@ -1,16 +1,17 @@
-#!/bin/sh
+#!/bin/bash
 
-DMENU="dmenu -w 400 -x 760 -y 420 -nb #faebd7 -nf #1e2d1c -sb #1e2d1c -sf #faebd7"
 
-choice=$(echo -e "www\nvim\nfile\nimg\nclr\nlock\nreboot\nshutdown" | $DMENU)
+DMENU='dmenu -w 600 -x 980 -y 600 -nb #faf6e6 -nf #1e2d1c -sb #1e2d1c -sf #faf6e6'
+
+choice=$(echo -e "www\nvim\nnoice\nsxiv\nfigma\nsleep\nrboot\noff" | $DMENU)
 
 case "$choice" in
-	www) www ;;
-	vim) st -g 96x33 -e vim ~/hej ;;
-	file) st -g 16x16 -e noice ~/ ;;
-	img) sxiv -t ~/img ;;
-	clr) firefox ;;
-	lock) echo sleep ;;
-	reboot) sudo reboot ;;
-	shutdown) sudo poweroff ;;
+	www) firefox ;;
+	vim) st -g 86x28 -e vim ~/hej ;;
+	noice) st -g 17x16 -e noice ~/ ;;
+	sxiv) sxiv -t ~/img ;;
+	figma) chromium ;;
+	sleep) echo sleep ;;
+	rboot) sudo reboot ;;
+	off) sudo poweroff ;;
 esac
