@@ -1,17 +1,15 @@
-#!/bin/bash
+#!/bin/sh
 
 
-DMENU='dmenu -w 600 -x 980 -y 600 -nb #faf6e6 -nf #1e2d1c -sb #1e2d1c -sf #faf6e6'
+DMENU='dmenu -w 400 -x 760 -y 420 -nb #f0ecdc -nf #1e2d1c -sb #1e2d1c -sf #f0ecdc'
 
-choice=$(echo -e "www\nvim\nnoice\nsxiv\nfigma\nsleep\nrboot\noff" | $DMENU)
+choice=$(echo -e "acme\nwww\nfile\nimg\nrboot\noff" | $DMENU)
 
 case "$choice" in
+	acme) x ;;
 	www) firefox ;;
-	vim) st -g 86x28 -e vim ~/hej ;;
-	noice) st -g 17x16 -e noice ~/ ;;
-	sxiv) sxiv -t ~/img ;;
-	figma) chromium ;;
-	sleep) echo sleep ;;
+	file) st -g 17x16 -e noice ~/ ;;
+	img) sxiv -t ~/img ;;
 	rboot) sudo reboot ;;
 	off) sudo poweroff ;;
 esac
