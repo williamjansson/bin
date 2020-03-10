@@ -1,5 +1,5 @@
-#!/bin/dash
+#!/bin/sh
 
-hsetroot -solid "#faf6e6" && st -g 64x33 -e w3m https://www.2chan.net/i.htm
+xsetroot -solid "#f0f0dc" && st -g 64x33 -e w3m https://www.2chan.net/i.htm
 
 trap wallpaper EXIT
