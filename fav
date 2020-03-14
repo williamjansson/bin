@@ -3,7 +3,7 @@
 
 DMENU='dmenu -w 400 -x 760 -y 420 -nb #f0f0dc -nf #1e2d1c -sb #1e2d1c -sf #f0f0dc'
 
-choice=$(echo -e "acme\nwww\nfile\nimg\nrboot\noff" | $DMENU)
+choice=$(echo -e "acme\nwww\nimg\nrboot\noff" | $DMENU)
 
 case "$choice" in
 	acme) x ;;
