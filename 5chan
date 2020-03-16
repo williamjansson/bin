@@ -1,5 +1,3 @@
-#!/usr/bin/bash
+#!/bin/sh
 
-hsetroot -solid "#faf6e6" && st -g 64x33 -e w3m https://mao.5ch.net/linux
-
-trap wallpaper EXIT
+rxvt -g 64x33 -e w3m https://mao.5ch.net/linux
