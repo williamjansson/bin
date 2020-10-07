@@ -1,15 +1,15 @@
 #!/bin/sh
 
 
-DMENU='dmenu -w 400 -x 760 -y 420 -nb #f0f0dc -nf #1e2d1c -sb #1e2d1c -sf #f0f0dc'
+DMENU='dmenu -w 200 -x 860 -y 420'
 
-choice=$(echo -e "acme\nwww\nimg\nrboot\noff" | $DMENU)
+choice=$(echo -e "write\nwww\nfile\nimg\nrboot\noff" | $DMENU)
 
 case "$choice" in
-	acme) x ;;
+	write) rxvt -g 80x40 -e skkfep ;;
 	www) firefox ;;
-	file) st -g 17x16 -e noice ~/ ;;
-	img) sxiv -t ~/img ;;
+	file) rxvt -name files -fn 6x13 -g 80x16+910+434 -e noice ~/ ;;
+	img) sxiv -tb ~/img ;;
 	rboot) sudo reboot ;;
 	off) sudo poweroff ;;
 esac

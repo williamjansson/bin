@@ -1,4 +1,4 @@
 #!/bin/dash
 
 #hsetroot -solid "#faebd7" -center "img/1-small.jpg"
-hsetroot -solid "#faf6e6"
+xsetroot -solid "#f0f0dc"
