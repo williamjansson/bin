@@ -1,0 +1,3 @@
+#!/bin/sh
+
+xterm -g 80x24+610+430 -e noice /menu &

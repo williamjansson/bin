@@ -1,15 +1,16 @@
 #!/bin/sh
 
 
-DMENU='dmenu -w 200 -x 860 -y 420'
+DMENU='dmenu -w 200 -x 540 -y 416'
+#DMENU='dmenu -w 484 -x 718 -y 791'
 
-choice=$(echo -e "write\nwww\nfile\nimg\nrboot\noff" | $DMENU)
+choice=$(echo -e "write\nwww\nnews\nfile\nrboot\noff" | $DMENU)
 
 case "$choice" in
-	write) rxvt -g 80x40 -e skkfep ;;
+	write) xterm -g 80x40+398+250 -e vi /home/x/doc/.blank ;;
 	www) firefox ;;
-	file) rxvt -name files -fn 6x13 -g 80x16+910+434 -e noice ~/ ;;
-	img) sxiv -tb ~/img ;;
+	news) news ;;
+	file) xterm -fn 6x13 -g 80x18+616+430 -e noice ~/ ;;
 	rboot) sudo reboot ;;
 	off) sudo poweroff ;;
 esac

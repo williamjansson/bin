@@ -1,0 +1,3 @@
+#!/bin/sh
+
+mixerctl -w inputs.record.mute=on

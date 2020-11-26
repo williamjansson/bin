@@ -1,7 +1,2 @@
 #!/bin/sh
-
-exec mpv \
-	 --shuffle \
-	 --no-video \
-	 "$@" \
-	 -- ~/av/music/
+xterm -bg "#e0ddc8" -g 213x1+0+1007 -e mpv --msg-level=ao/netbsd=no,file=no,cplayer=no --term-status-msg='  ${filename} ${time-pos} (${percent-pos}%)' --shuffle --no-video --loop-playlist ~/av/audio/ &

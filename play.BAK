@@ -1,0 +1,10 @@
+#!/bin/sh
+
+#function(){
+#	list=$(sed -n "/$1/,/sunset/p" /tmp/list.txt)
+#	trunk=$(tr '\n' ' ' < ${list}) 
+#}
+
+list=$(sed -n "/$1/,/sunset/p" /tmp/list.txt)
+#tr '\n' ' ' < $(list) > ~/hej 
+echo -n $list > ~/hej

@@ -1,3 +1,3 @@
-#!/usr/bin/bash
+#!/bin/sh
 
-st -g 64x33 -e w3m http://nihongo.monash.edu/cgi-bin/wwwjdic?1C
+xterm -g 80x40 -e w3m http://nihongo.monash.edu/cgi-bin/wwwjdic?1C

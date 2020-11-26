@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+#
+# omxplayer (audio-only)
+
+url() {
+	fetch="$(xsel -p)"
+	echo -n "youtube-dl --username blueauraarts -f 251 -g $fetch"
+}
+
+omxplayer --loop --vol -1000 `$(url)`

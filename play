@@ -1,10 +1,17 @@
-#!/usr/bin/bash
-#
-# omxplayer (audio-only)
+#!/bin/sh
 
-url() {
-	fetch="$(xsel -p)"
-	echo -n "youtube-dl --username blueauraarts -f 251 -g $fetch"
-}
+first=$(ls | head -n 1)
+prepend=$(ls | sed -n "/$1/q;p")
 
-omxplayer --loop --vol -1000 `$(url)`
+if [ "$1" = "$first" ]; then
+	append=$(ls | tail -n +2)
+else
+	append=$(ls | sed "1,/$1/ d")
+fi
+
+list=$(echo $append $prepend)
+
+x=$(xdotool getwindowfocus getwindowgeometry | grep Pos | cut -f 4 -d " " | sed "s/,.*//")
+y=$(xdotool getwindowfocus getwindowgeometry | grep Pos | cut -f 4 -d " " | sed "s/.*,//")
+
+xterm -g 28x2+$(($x+18))+$(($y+234+78)) -e mpv --msg-level=ao/netbsd=no,file=no,cplayer=no --term-status-msg='${time-pos} (${percent-pos}%)' --term-playing-msg='${filename}' --no-video --loop-playlist $1 $list &

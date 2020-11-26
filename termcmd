@@ -1,4 +1,3 @@
 #!/bin/sh
 
-
-rxvt -g 80x40 &
+xterm -g 80x40+398+250 &

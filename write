@@ -1,0 +1,4 @@
+#!/bin/sh
+
+xterm -g 80x40+398+250 -e vi ~/doc/.blank &
+

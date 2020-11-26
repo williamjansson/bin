@@ -1,3 +1,3 @@
 #!/bin/sh
 
-st -g 64x33 -e w3m https://news.yahoo.co.jp/
+xterm -g 80x40+398+250 -e w3m https://news.yahoo.co.jp/ &
