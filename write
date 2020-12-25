@@ -1,4 +1,4 @@
 #!/bin/sh
 
-xterm -g 80x40+398+250 -e vi ~/doc/.blank &
+xterm -sh 1.4 -g 80x40+398+250 -e vi ~/doc/.blank &
 

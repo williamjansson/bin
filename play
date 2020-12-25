@@ -1,12 +1,12 @@
 #!/bin/sh
-
-first=$(ls | head -n 1)
-prepend=$(ls | sed -n "/$1/q;p")
+pkill mpv
+first=$(ls -t | head -n 1)
+prepend=$(ls -t | sed -n "/$1/q;p")
 
 if [ "$1" = "$first" ]; then
-	append=$(ls | tail -n +2)
+	append=$(ls -t | tail -n +2)
 else
-	append=$(ls | sed "1,/$1/ d")
+	append=$(ls -t | sed "1,/$1/ d")
 fi
 
 list=$(echo $append $prepend)

@@ -1,4 +1,0 @@
-#!/usr/bin/bash
-
-pkill mozc && pkill dbus && pkill fcitx
-

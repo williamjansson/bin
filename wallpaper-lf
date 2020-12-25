@@ -1,5 +1,0 @@
-#!/bin/dash
-
-xdo show -a "bar"
-#hsetroot -solid "#faebd7" -center ~/img/1-small.jpg
-hsetroot -solid "#faf6e6"

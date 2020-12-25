@@ -1,8 +1,0 @@
-#!/bin/sh
-
-xsetroot -solid "#000000"
-mpv -loop $1 $(xsel)
-
-wallpaper=$(xsetroot -solid "#f0eed8")
-
-trap wallpaper exit

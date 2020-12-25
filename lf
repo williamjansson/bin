@@ -1,7 +1,0 @@
-#!/bin/dash
-
-xdo hide -a "bar"
-hsetroot -solid "#faf6e6" && st -g 17x16 -e noice
-
-
-trap wallpaper-lf EXIT

@@ -1,3 +1,0 @@
-#!/bin/dash
-
-st -g 64x33 -e w3m -no-graph https://i.reddit.com/r/UnixPorn

@@ -1,3 +1,0 @@
-#!/bin/dash
-
-dmenu_run $1
