@@ -1,3 +1,3 @@
 #!/bin/sh
 
-xterm -g 80x24+920+460 -e noice /menu &
+urxvt -g 80x16+924+460 -e noice &

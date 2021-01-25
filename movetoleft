@@ -1,0 +1,5 @@
+#!/bin/sh
+
+height=$(xdotool getwindowfocus getwindowgeometry | grep -i geo | awk '{print $2}' |sed -e 's/x/ /g' | awk '{print $2}')
+
+xdotool getwindowfocus windowmove 0 $((1080 - $height))

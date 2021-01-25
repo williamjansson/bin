@@ -14,4 +14,4 @@ list=$(echo $append $prepend)
 x=$(xdotool getwindowfocus getwindowgeometry | grep Pos | cut -f 4 -d " " | sed "s/,.*//")
 y=$(xdotool getwindowfocus getwindowgeometry | grep Pos | cut -f 4 -d " " | sed "s/.*,//")
 
-xterm -g 28x2+$(($x+18))+$(($y+234+78)) -e mpv --msg-level=ao/netbsd=no,file=no,cplayer=no --term-status-msg='${time-pos} (${percent-pos}%)' --term-playing-msg='${filename}' --no-video --loop-playlist $1 $list &
+xterm -g 28x2+$(($x+18))+$(($y+232+80)) -e mpv --msg-level=ao/netbsd=no,file=no,cplayer=no --term-status-msg='${time-pos} (${percent-pos}%)' --term-playing-msg='${filename}' --no-video --loop-playlist $1 $list &

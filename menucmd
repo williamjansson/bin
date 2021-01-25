@@ -1,3 +1,4 @@
 #!/bin/sh
 
-dmenu_run -w 200 -x 860 -y 440
+#dmenu_run -w 200 -x 860 -y 440
+dmenu_run -fn "xfont" -nb "#1e2d1c" -nf "#f0eed8" -sb "#f0eed8" -sf "#1e2d1c"
